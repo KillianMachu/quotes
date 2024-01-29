@@ -1,5 +1,5 @@
-import logo from './logo.svg';
 import './App.css';
+import { getQuotes } from './data/data';
 
 function App() {
   return (
@@ -8,7 +8,8 @@ function App() {
       Mes citations
     </h1>
     <div className="App">
-    {quotes.map((x)=> <Quote text={x.text} author={x.author}/>
+    
+    {getQuotes().map((x)=> <Quote key = {x.id} {...x} />
  )}
     </div>
   </div>
@@ -16,6 +17,7 @@ function App() {
 }
 
 function Quote(props) {
+
   return (
     <>
       <div>
