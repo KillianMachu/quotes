@@ -36,3 +36,12 @@
     transform: rotate(360deg);
   }
 }
+
+
+.App div:nth-child(1){
+  color: blue;
+}
+
+.App div:nth-child(2){
+  color: green;
+}
