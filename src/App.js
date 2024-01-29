@@ -8,7 +8,8 @@ function App() {
       Mes citations
     </h1>
     <div className="App">
-      <Quote text="Elementary, my dear Watson" author="Sherlock Holmes"/>
+    {quotes.map((x)=> <Quote text={x.text} author={x.author}/>
+ )}
     </div>
   </div>
   );
