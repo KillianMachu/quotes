@@ -23,3 +23,11 @@ function getQuotes() {
 
 
 export {getQuotes}
+
+function getNextQuote(id){
+    let quote = getQuotes().filter(x=>x.id>id)
+    quote.sort((a, b) => a.id - b.id)
+    return quote.at(0)
+}
+
+export {getNextQuote}
