@@ -9,8 +9,8 @@ function App() {
     </h1>
     <div className="App">
     
-    {getQuotes().map((x)=> <Quote key = {x.id} {...x} />
- )}
+    <Allquotes quotes={getQuotes()}/>
+
     </div>
   </div>
   );
@@ -28,5 +28,13 @@ function Quote(props) {
       </div>
     </>);
     }
+
+function Allquotes(props) {
+  return(
+    <>
+      {props.quotes.map((x)=> <Quote key = {x.id} {...x} />)}
+    </>
+  )
+}
 
 export default App;
